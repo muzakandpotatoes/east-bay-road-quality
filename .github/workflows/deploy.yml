@@ -37,12 +37,11 @@ jobs:
           mkdir -p site
           python3 scripts/build_map.py data/out/payload.json site/index.html
           cp -r docs site/docs
-
-      - name: Check the key did not leak into the page
-        if: ${{ secrets.TRACESTRACK_API_KEY == '' }}
-        run: |
-          if grep -q "tile.tracestrack.com" site/index.html; then
-            echo "::error::built page references a keyed basemap without a secret set"
+          # Guard against a keyed basemap slipping into the page when no secret
+          # is configured. Done in shell because the secrets context is not
+          # available to a step-level `if:`.
+          if [ -z "$TRACESTRACK_API_KEY" ] && grep -q "tile.tracestrack.com" site/index.html; then
+            echo "::error::built page references a keyed basemap but no secret is set"
             exit 1
           fi
 
