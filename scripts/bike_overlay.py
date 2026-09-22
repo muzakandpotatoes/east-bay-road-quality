@@ -50,6 +50,8 @@ def utm(geom):
 def main(pci_path, bikeways_path, out_offstreet, out_summary):
     bike = [f for f in json.load(open(bikeways_path))["features"]
             if f["properties"]["status"] == "existing"]
+    # Only cities that actually have bikeway data; others simply get no tiers.
+    CITIES = sorted({f["properties"]["city"] for f in bike})
     for f in bike:
         f["_g"] = utm(f["geometry"])
         f["_tier"] = TIER_OF.get(f["properties"]["bikeway_class"])
@@ -59,7 +61,7 @@ def main(pci_path, bikeways_path, out_offstreet, out_summary):
         f["_g"] = utm(f["geometry"])
 
     # ---- tag PCI sections, best tier first ---------------------------------
-    for city in ("Berkeley", "Oakland"):
+    for city in CITIES:
         for tier in TIERS:
             lines = [f["_g"] for f in bike
                      if f["properties"]["city"] == city and f["_tier"] == tier]
@@ -77,9 +79,9 @@ def main(pci_path, bikeways_path, out_offstreet, out_summary):
     # ---- off-street residual: bikeways no tagged section accounts for ------
     tagged = {c: [f["_g"] for f in pci["features"]
                   if f["properties"]["city"] == c and f["properties"]["bike_tier"]]
-              for c in ("Berkeley", "Oakland")}
+              for c in CITIES}
     offstreet = []
-    for city in ("Berkeley", "Oakland"):
+    for city in CITIES:
         street_buf = (unary_union(tagged[city]).buffer(ON_ROUTE_M)
                       if tagged[city] else None)
         kept = []
@@ -117,7 +119,7 @@ def main(pci_path, bikeways_path, out_offstreet, out_summary):
 
     # ---- summary ----------------------------------------------------------
     summary = json.load(open(out_summary))
-    for city in ("Berkeley", "Oakland"):
+    for city in CITIES:
         rows = [f for f in pci["features"] if f["properties"]["city"] == city]
         on = [f for f in rows if f["properties"]["bike_tier"]]
 

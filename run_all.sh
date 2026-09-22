@@ -33,6 +33,7 @@ cd scripts
 echo "==> extract PCI tables (validated against each report's own totals)"
 $PY extract_berkeley.py ../$R/berkeley_ptap25.pdf ../$R/berkeley_pci.csv
 $PY extract_oakland.py  ../$R/oakland_ptap25.pdf  ../$R/oakland_pci.csv
+[ -s ../$R/albany_ptap22.pdf ] && $PY extract_albany.py ../$R/albany_ptap22.pdf ../$R/albany_pci.csv
 $PY extract_berkeley_overlays.py ../$R/berkeley_5yr_plan.pdf ../$R/berkeley_moratorium.pdf \
      ../$R/berkeley_plan.csv ../$R/berkeley_moratorium.csv
 
@@ -43,11 +44,18 @@ $PY fetch_geometry.py ../$R
 [ -s ../$R/berkeley_osm_streets.geojson ] || $PY fetch_osm.py ../$R/berkeley_osm_streets.geojson || true
 
 echo "==> join PCI rows to geometry"
-$PY join_berkeley.py ../$R/berkeley_pci.csv ../$R/berkeley_centerlines.geojson \
+$PY join_city.py Berkeley ../$R/berkeley_pci.csv ../$R/berkeley_centerlines.geojson \
      ../$O/berkeley_pci_segments.geojson ../$O/berkeley_join_report.json \
      ../$R/berkeley_osm_streets.geojson
 $PY join_oakland.py  ../$R/oakland_pci.csv ../$R/oakland_pci_sections.geojson \
      ../$O/oakland_pci_segments.geojson ../$O/oakland_join_report.json
+# Albany: same PDF-listing shape as Berkeley, and its centerlines are already
+# in Berkeley's layer, filtered to Albany so repeated street names cannot cross.
+if [ -s ../$R/albany_pci.csv ]; then
+  $PY join_city.py Albany ../$R/albany_pci.csv ../$R/berkeley_centerlines.geojson \
+       ../$O/albany_pci_segments.geojson ../$O/albany_join_report.json \
+       ../$R/albany_osm_streets.geojson Albany
+fi
 
 echo "==> context overlays"
 $PY join_berkeley_overlays.py ../$R/berkeley_plan.csv ../$R/berkeley_moratorium.csv \
@@ -58,9 +66,11 @@ $PY build_oakland_overlays.py ../$R/oakland_pci_sections.geojson \
      ../$O/oakland_paving_plan.geojson ../$O/oakland_moratorium.geojson
 
 echo "==> combine, pack, build map"
-$PY combine.py ../$O/berkeley_pci_segments.geojson ../$O/oakland_pci_segments.geojson \
-     ../$O/berkeley_join_report.json ../$O/oakland_join_report.json \
-     ../$O/east_bay_pci.geojson ../$O/east_bay_pci.csv ../$O/summary.json
+CITY_ARGS="../$O/berkeley_pci_segments.geojson ../$O/berkeley_join_report.json \
+           ../$O/oakland_pci_segments.geojson ../$O/oakland_join_report.json"
+[ -s ../$O/albany_pci_segments.geojson ] && CITY_ARGS="$CITY_ARGS \
+           ../$O/albany_pci_segments.geojson ../$O/albany_join_report.json"
+$PY combine.py ../$O/east_bay_pci.geojson ../$O/east_bay_pci.csv ../$O/summary.json $CITY_ARGS
 
 # Bike network: needs data/out/bikeways.geojson from ./run_bikeways.sh.
 if [ -s ../$O/bikeways.geojson ]; then

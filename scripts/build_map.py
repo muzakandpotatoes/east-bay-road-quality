@@ -46,9 +46,9 @@ HTML = r"""<!doctype html>
   .sub{color:var(--ink-2);font-size:12px;margin:0}
   h2{margin:0 0 8px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
 
-  .stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(86px,1fr));gap:8px}
   .stat{border:1px solid var(--hairline);border-radius:8px;padding:8px 10px}
-  .stat b{display:block;font-size:19px;letter-spacing:-.02em}
+  .stat b{display:block;font-size:18px;letter-spacing:-.02em}
   .stat span{color:var(--ink-2);font-size:11px}
 
   .row{display:flex;align-items:center;gap:9px;width:100%;padding:4px 6px;margin:0 -6px;
@@ -93,7 +93,7 @@ HTML = r"""<!doctype html>
 <div class="panel">
   <section>
     <h1>East Bay street pavement condition</h1>
-    <p class="sub">Pavement Condition Index by street section, Berkeley &amp; Oakland — fall 2024 StreetSaver surveys</p>
+    <p class="sub">Pavement Condition Index by street section, from each city's StreetSaver survey</p>
   </section>
 
   <section>
@@ -373,7 +373,8 @@ HTML = r"""<!doctype html>
 
   // ---- filters -----------------------------------------------------------
   const onBand = new Set(BANDS.map(b => b.name));
-  const onCity = new Set(["Berkeley", "Oakland"]);
+  const CITIES = [...new Set(sections.map(d => d.city))].sort();
+  const onCity = new Set(CITIES);
   const onTier = new Set(TIERS.map(t => t.key));
   let bikeOnly = false;
 
@@ -425,7 +426,7 @@ HTML = r"""<!doctype html>
 
   function drawCities(){
     toggle(document.getElementById("cities"),
-      ["Berkeley", "Oakland"].map(c => ({
+      CITIES.map(c => ({
         key:c, label:c, color:"#52514e",
         count:sections.filter(d => d.city === c).length
       })),
@@ -489,7 +490,7 @@ HTML = r"""<!doctype html>
 
   // ---- summary tiles (also the required non-colour reading of the data) ---
   const s = DATA.summary.cities;
-  document.getElementById("stats").innerHTML = ["Berkeley", "Oakland"].map(c =>
+  document.getElementById("stats").innerHTML = CITIES.filter(c => s[c]).map(c =>
     `<div class="stat"><b>${s[c].weighted_pci_mapped}</b>
      <span>${c} average PCI<br>${num(s[c].sections_mapped)} of ${num(s[c].sections_in_report)} sections mapped
      (${(100 * (1 - s[c].unmatched_rate)).toFixed(1)}%)</span></div>`).join("");
@@ -500,7 +501,7 @@ HTML = r"""<!doctype html>
 """
 
 
-PCI_CREDIT = "PCI: Berkeley P-TAP 25 &amp; Oakland P-TAP 25 (fall 2024)"
+PCI_CREDIT = ("PCI: Berkeley &amp; Oakland P-TAP 25 (2024), Albany P-TAP 22 (2021)")
 OSM_CREDIT = ('&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
               " contributors")
 TRACESTRACK_CREDIT = (

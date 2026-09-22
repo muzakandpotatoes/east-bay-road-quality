@@ -106,14 +106,25 @@ def _substring(line, a, b):
     return dedup
 
 
-def load_centerlines(city_path, osm_path=None):
+def load_centerlines(city_path, osm_path=None, municipality=None):
     """City centerlines, topped up from OSM only where a name is absent.
 
     The city layer stays authoritative: an OSM way is admitted only when its
     normalised name appears nowhere in the city layer, so the two sources can
     never supply competing geometry for the same street.
+
+    `municipality` keeps only that city's own streets, which matters when the
+    layer spans several cities and street names repeat across them.  The
+    filter is applied *before* deciding what OSM should fill in -- otherwise a
+    street the filter removes still counts as "present" and OSM is refused,
+    which silently loses it (Albany's Ramona Ave is tagged Contra Costa in
+    Berkeley's layer and vanished exactly this way).
     """
     feats = json.load(open(city_path))["features"]
+    if municipality:
+        feats = [f for f in feats
+                 if municipality in ((f["properties"] or {}).get("MUNILEFT"),
+                                     (f["properties"] or {}).get("MUNIRIGHT"))]
     if not osm_path or not os.path.exists(osm_path):
         return feats, 0
     have = {normalize((f["properties"] or {}).get("FULLNAME")) for f in feats}

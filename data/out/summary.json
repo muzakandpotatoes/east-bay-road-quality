@@ -69,6 +69,20 @@
           "shared": 4.4
         }
       }
+    },
+    "Albany": {
+      "sections_in_report": 214,
+      "sections_mapped": 200,
+      "unmatched_rate": 0.0654,
+      "weighted_pci_mapped": 57.3,
+      "by_category": {
+        "Very Good / Excellent": 39,
+        "Fair": 26,
+        "Poor": 72,
+        "Good": 32,
+        "At Risk": 26,
+        "Failed": 5
+      }
     }
   },
   "mtc_breaks": [

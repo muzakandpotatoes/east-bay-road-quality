@@ -11,7 +11,7 @@ Berkeley's (which are PDF street lists) there is nothing to match:
 
 The ArcGIS 5YP_Schedule services are a stale 2016-2021 vintage and are not used.
 """
-import datetime, json, sys
+import datetime, json, os, sys
 import arcgis
 
 MORATORIUM = "https://gismaps.oaklandca.gov/server/rest/services/OaklandStreets/FeatureServer/0"
@@ -47,6 +47,15 @@ def build_plan(sections_geojson, out_path):
 
 
 def build_moratorium(out_path):
+    # The city's own server is intermittently unavailable; a previous download
+    # is reused rather than failing the whole pipeline over a transient 500.
+    if os.path.exists(out_path) and os.path.getsize(out_path) > 0:
+        try:
+            n = len(json.load(open(out_path))["features"])
+            print(f"moratorium: reusing {out_path} ({n} segments)")
+            return
+        except Exception:
+            pass
     where = "M_DATEEND IS NOT NULL"
     print(f"moratorium: {arcgis.count(MORATORIUM, where)} street segments flagged")
     fc = arcgis.fetch_geojson(

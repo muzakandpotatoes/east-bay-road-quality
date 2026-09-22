@@ -35,9 +35,11 @@ def wkt(geom):
     return "MULTILINESTRING (" + ", ".join(f"({ring(c)})" for c in geom["coordinates"]) + ")"
 
 
-def main(berkeley_gj, oakland_gj, bk_report, oak_report, out_gj, out_csv, out_summary):
+def main(out_gj, out_csv, out_summary, *city_files):
+    """city_files: alternating <segments.geojson> <join_report.json> per city."""
+    pairs = list(zip(city_files[::2], city_files[1::2]))
     feats = []
-    for path in (berkeley_gj, oakland_gj):
+    for path, _ in pairs:
         feats.extend(json.load(open(path))["features"])
     for f in feats:
         f["properties"]["mtc_category"] = category(f["properties"]["pci"])
@@ -53,8 +55,9 @@ def main(berkeley_gj, oakland_gj, bk_report, oak_report, out_gj, out_csv, out_su
             wr.writerow(row)
 
     summary = {"cities": {}, "mtc_breaks": [[lo, hi, n] for lo, hi, n in MTC_BREAKS]}
-    for path, city in ((bk_report, "Berkeley"), (oak_report, "Oakland")):
+    for _, path in pairs:
         rep = json.load(open(path))
+        city = rep["city"]
         sub = [f["properties"] for f in feats if f["properties"]["city"] == city]
         area = sum(p["area_sqft"] or 0 for p in sub)
         summary["cities"][city] = {
@@ -76,4 +79,4 @@ def main(berkeley_gj, oakland_gj, bk_report, oak_report, out_gj, out_csv, out_su
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:8])
+    main(*sys.argv[1:])

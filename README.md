@@ -18,13 +18,14 @@ because with a key it embeds a credential.
 
 ## What came out
 
-| | Berkeley | Oakland |
-|---|---|---|
-| Sections in the report | 1,217 | 3,971 |
-| Sections mapped | 1,169 (**96.1%**) | 3,951 (**99.5%**) |
-| Unmatched | 48 (3.9%) | 20 (0.5%) |
-| Area-weighted PCI (report) | 56.4 → **56** | 59.5 → **60** |
-| Area-weighted PCI (mapped subset) | 56.4 | 59.4 |
+| | Berkeley | Oakland | Albany |
+|---|---|---|---|
+| Sections in the report | 1,217 | 3,971 | 214 |
+| Sections mapped | 1,169 (**96.1%**) | 3,951 (**99.5%**) | 200 (**93.5%**) |
+| Unmatched | 48 (3.9%) | 20 (0.5%) | 14 (6.5%) |
+| Area-weighted PCI (report) | 56.4 → **56** | 59.5 → **60** | 57.2 (report quotes 56) |
+| Area-weighted PCI (mapped subset) | 56.4 | 59.4 | 57.3 |
+| Survey | P-TAP 25, fall 2024 | P-TAP 25, fall 2024 | P-TAP 22, Sept 2021 |
 
 The mapped subset's weighted PCI tracks the citywide figure closely in both
 cities, so dropping the unmatched sections does not bias the picture.
@@ -43,6 +44,9 @@ Outputs in `data/out/`:
 
 - Berkeley, *2024 Pavement Management Plan Update (P-TAP 25)* — Section IV
   street-section listing.
+- Albany, *2021 PMP Update (P-TAP 22)* — Section IV, "Reference Report -
+  Alphabetical". Same consultant as Berkeley's, so the same word-position
+  machinery reads it; the layout is a shorter nine-column variant.
 - Oakland, *P-TAP Round 25* — Appendix C, Section PCI/RSL listing.
 - Berkeley FY2027–31 Five-Year Street Rehabilitation Plan and Measure FF plan;
   Berkeley streets-on-moratorium list.
@@ -77,6 +81,14 @@ Berkeley  OK sections 1,217 (report 1,216)   OK area 39,367,093 ft² (report 39,
 
 The plan extract is checked the same way, per fiscal year, against the section
 counts and mileage printed on each page — all ten groups match exactly.
+
+Albany is gated hardest of all: its Executive Summary breaks the network down
+by condition category *and* by functional class, both in square feet, and the
+parse reproduces **all nine figures exactly**, plus the 5,158,526 sq ft total.
+Its quoted average PCI of 56 against an area-weighted 57.2 is therefore a
+difference in how the average is taken, not a parsing error — the report
+discusses the network in lane miles — so that one figure is reported rather
+than enforced.
 
 Note the "~3,304 sections" figure often quoted for Oakland is the number of
 sections *physically surveyed*; Appendix C covers the whole managed network of
