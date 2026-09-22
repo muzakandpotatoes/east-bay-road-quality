@@ -1,0 +1,90 @@
+{
+  "berkeley_plan_2025_mileage": {
+    "Shared use path (Class I)": {
+      "2017": 18.2,
+      "2025": 18.9
+    },
+    "Bicycle lane (Class II)": {
+      "2017": 12.1,
+      "2025": 10.9
+    },
+    "Upgraded bicycle lane (Class II)": {
+      "2017": 0.3,
+      "2025": 1.8
+    },
+    "Bicycle route (Class III)": {
+      "2017": 8.1,
+      "2025": 12.6
+    },
+    "Bicycle boulevard (Class III)": {
+      "2017": 11.9,
+      "2025": 12.5
+    },
+    "Separated bikeway (Class IV)": {
+      "2017": 0.1,
+      "2025": 4.2
+    },
+    "Total": {
+      "2017": 50.8,
+      "2025": 60.9
+    }
+  },
+  "sources": {
+    "Berkeley | Berkeley GIS: Bicycle Boulevards | existing": {
+      "IIIB": 16.0
+    },
+    "Berkeley | Berkeley GIS: Bikeways (2004 classes) | existing": {
+      "I": 6.6,
+      "II": 10.5,
+      "III": 16.4,
+      "IIIB": 5.1
+    },
+    "Berkeley | Berkeley GIS: Separated Bikeways | existing": {
+      "IV": 1.7
+    },
+    "Berkeley | OpenStreetMap | existing": {
+      "I": 11.4,
+      "II": 12.7,
+      "IIB": 0.5,
+      "IIIA": 21.5,
+      "IIIB": 5.0,
+      "IV": 3.4
+    },
+    "Oakland | Oakland GIS: BikeNetwork | existing": {
+      "I": 29.8,
+      "II": 55.0,
+      "IIB": 38.4,
+      "III": 38.3,
+      "IIIA": 11.8,
+      "IIIB": 23.6,
+      "IV": 5.1
+    },
+    "Oakland | Oakland GIS: BikeNetwork | proposed": {
+      "I": 51.8,
+      "II": 40.4,
+      "IIB": 64.0,
+      "III": 32.2,
+      "IIIA": 0.4,
+      "IIIB": 74.1,
+      "IV": 51.0
+    },
+    "Oakland | OpenStreetMap | existing": {
+      "I": 26.0,
+      "II": 65.8,
+      "IIB": 41.2,
+      "IIIA": 39.1,
+      "IV": 7.1
+    }
+  },
+  "berkeley_plan_tier1_segments": {
+    "count": 23,
+    "miles": 15.3,
+    "by_class": {
+      "III": 2,
+      "IIIB": 15,
+      "IIB": 2,
+      "I": 1,
+      "IV": 3
+    }
+  }
+}

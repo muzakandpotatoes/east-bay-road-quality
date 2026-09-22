@@ -1,0 +1,22 @@
+# Basemap credential. The built map embeds it, so the built map is ignored too —
+# the page is built in CI from data/out/payload.json instead.
+.env
+east_bay_pavement_map.html
+
+# Source PDFs and intermediate geometry: large, and rebuildable with
+# ./run_all.sh + ./run_bikeways.sh (except Oakland's PDF, see README).
+data/raw/
+
+# Derived data. payload.json is what the published map loads, so it is tracked;
+# the multi-megabyte GeoJSON/CSV exports are regenerated rather than stored.
+data/out/*
+!data/out/payload.json
+!data/out/summary.json
+!data/out/bikeways_summary.json
+!data/out/berkeley_join_report.json
+!data/out/oakland_join_report.json
+!data/out/berkeley_overlay_report.json
+
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,418 @@
+{
+  "city": "Berkeley",
+  "rows": 1217,
+  "matched": 1169,
+  "unmatched_rate": 0.0394,
+  "reasons": {
+    "ok": 1169,
+    "begin cross street not found on street": 27,
+    "end cross street not found on street": 10,
+    "street name not in centerlines": 4,
+    "length mismatch": 6,
+    "no path between cross streets along this street": 1
+  },
+  "unmatched": [
+    {
+      "street_name": "62ND ST",
+      "section_id": "060",
+      "beg_location": "MARTIN LUTHER KING JR WAY",
+      "end_location": "CITY LIMIT (DOVER ST)",
+      "length_ft": "625.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "65TH ST",
+      "section_id": "060",
+      "beg_location": "ADELINE ST",
+      "end_location": "680' E/O ADELINE ST",
+      "length_ft": "680.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "9TH ST",
+      "section_id": "066",
+      "beg_location": "HEINZ AVE",
+      "end_location": "JOG JUST NORTH OF ANTHONY",
+      "length_ft": "410.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "ADDISON ST",
+      "section_id": "010",
+      "beg_location": "AQUATIC PARK",
+      "end_location": "RRX",
+      "length_ft": "466.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "ADELINE (NB)",
+      "section_id": "076",
+      "beg_location": "ALCATRAZ AVE",
+      "end_location": "MLK/ ADELINE ST",
+      "length_ft": "890.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "BANCROFT WAY",
+      "section_id": "022",
+      "beg_location": "AQUATIC PARK",
+      "end_location": "3RD ST (RR TRACKS)",
+      "length_ft": "300.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "BANCROFT WAY",
+      "section_id": "086",
+      "beg_location": "PROSPECT ST",
+      "end_location": "PANORAMIC WAY",
+      "length_ft": "135.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "BATEMAN ST",
+      "section_id": "080",
+      "beg_location": "108 N/O PRINCE ST",
+      "end_location": "WOOLSEY ST",
+      "length_ft": "323.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "BONITA AVE",
+      "section_id": "050",
+      "beg_location": "BERKELEY WAY",
+      "end_location": "NORTH OF HEARST",
+      "length_ft": "475.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "BUENA VISTA WAY",
+      "section_id": "074",
+      "beg_location": "DELMAR AVE",
+      "end_location": "260' NORTH OF PRIVATE PROP",
+      "length_ft": "470.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "BUENA VISTA WAY",
+      "section_id": "078",
+      "beg_location": "260' NORTH OF PRIVATE PROP",
+      "end_location": "PRIVATE PROPERTY",
+      "length_ft": "260.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "EAST FRONTAGE RD",
+      "section_id": "035",
+      "beg_location": "HARRISON (C.O.P.)",
+      "end_location": "GILMAN ST",
+      "length_ft": "675.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "EAST FRONTAGE RD",
+      "section_id": "040",
+      "beg_location": "GILMAN ST",
+      "end_location": "C.O.P.",
+      "length_ft": "875.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "EAST FRONTAGE RD",
+      "section_id": "045",
+      "beg_location": "C.O.P.",
+      "end_location": "HEARST AVE",
+      "length_ft": "2625.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "FORREST LANE",
+      "section_id": "070",
+      "beg_location": "HILLDALE AVE",
+      "end_location": "KEELER AVE",
+      "length_ft": "450.0",
+      "reason": "street name not in centerlines"
+    },
+    {
+      "street_name": "FORREST LANE",
+      "section_id": "072",
+      "beg_location": "KEELER AVE",
+      "end_location": "GRIZZLY PEAK BLVD",
+      "length_ft": "615.0",
+      "reason": "street name not in centerlines"
+    },
+    {
+      "street_name": "FORREST LANE",
+      "section_id": "073",
+      "beg_location": "GRIZZLY PEAK BLVD",
+      "end_location": "CRESTON RD",
+      "length_ft": "337.0",
+      "reason": "street name not in centerlines"
+    },
+    {
+      "street_name": "GLEN AVE",
+      "section_id": "030",
+      "beg_location": "EUNICE ST",
+      "end_location": "1283 GLEN AVE (CORNER)",
+      "length_ft": "620.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "KALA BAGAI WAY",
+      "section_id": "050",
+      "beg_location": "ADDISON ST",
+      "end_location": "UNIVERSITY AVE",
+      "length_ft": "356.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "KALA BAGAI WAY",
+      "section_id": "052",
+      "beg_location": "CENTER ST",
+      "end_location": "ADDISON ST",
+      "length_ft": "330.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "LE ROY AVE",
+      "section_id": "032",
+      "beg_location": "ROSE ST",
+      "end_location": "HAWTHORNE TERRACE",
+      "length_ft": "390.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "LE ROY AVE",
+      "section_id": "034",
+      "beg_location": "HAWTHORNE TERRACE",
+      "end_location": "CEDAR ST",
+      "length_ft": "1235.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "LE ROY AVE",
+      "section_id": "040",
+      "beg_location": "CEDAR ST",
+      "end_location": "HILGARD AVE",
+      "length_ft": "300.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "LE ROY AVE",
+      "section_id": "044",
+      "beg_location": "CUL-DE-SAC",
+      "end_location": "RIDGE RD",
+      "length_ft": "805.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "LE ROY AVE",
+      "section_id": "048",
+      "beg_location": "RIDGE RD",
+      "end_location": "HEARST AVE",
+      "length_ft": "350.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "NORTHBRAE TUNNEL",
+      "section_id": "065",
+      "beg_location": "CONTRA COSTA AVE",
+      "end_location": "DEL NORTE ST",
+      "length_ft": "1410.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "OREGON ST",
+      "section_id": "063",
+      "beg_location": "MILVIA ST",
+      "end_location": "ADELINE ST",
+      "length_ft": "560.0",
+      "reason": "length mismatch (46%)",
+      "length_err": 0.46,
+      "matched_ft": 302,
+      "method": "cross-streets"
+    },
+    {
+      "street_name": "OREGON ST",
+      "section_id": "064",
+      "beg_location": "SHATTUCK AVE",
+      "end_location": "ADELINE ST",
+      "length_ft": "262.0",
+      "reason": "length mismatch (44%)",
+      "length_err": 0.438,
+      "matched_ft": 377,
+      "method": "cross-streets"
+    },
+    {
+      "street_name": "OXFORD ST",
+      "section_id": "042",
+      "beg_location": "161' N/O HEARST AVE",
+      "end_location": "HEARST AVE",
+      "length_ft": "161.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "PAGE ST",
+      "section_id": "020",
+      "beg_location": "EAST FRONTAGE RD",
+      "end_location": "2ND ST",
+      "length_ft": "270.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "PAGE ST",
+      "section_id": "022",
+      "beg_location": "2ND ST",
+      "end_location": "FENDER",
+      "length_ft": "125.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "PARKER ST",
+      "section_id": "032",
+      "beg_location": "25' W/O 7TH ST",
+      "end_location": "7TH ST",
+      "length_ft": "25.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "PARKER ST",
+      "section_id": "060A",
+      "beg_location": "MARTIN LUTHER KING JR WAY",
+      "end_location": "374' E/O MARTIN LUTHER KING JR WAY",
+      "length_ft": "374.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "PARKER ST",
+      "section_id": "060B",
+      "beg_location": "374' E/O MARTIN LUTHER KING JR WAY",
+      "end_location": "MILVIA ST",
+      "length_ft": "291.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "PIEDMONT CRESCENT",
+      "section_id": "060",
+      "beg_location": "DWIGHT WAY",
+      "end_location": "WARRING ST",
+      "length_ft": "285.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "QUARRY RD",
+      "section_id": "030",
+      "beg_location": "DEAD END (LA LOMA AVE)",
+      "end_location": "LA LOMA AVE",
+      "length_ft": "340.0",
+      "reason": "length mismatch (84%)",
+      "length_err": 0.842,
+      "matched_ft": 54,
+      "method": "cross-streets"
+    },
+    {
+      "street_name": "RUSSELL ST",
+      "section_id": "061",
+      "beg_location": "MILVIA ST",
+      "end_location": "ADELINE ST",
+      "length_ft": "115.0",
+      "reason": "length mismatch (41%)",
+      "length_err": 0.414,
+      "matched_ft": 163,
+      "method": "cross-streets"
+    },
+    {
+      "street_name": "SAN ANTONIO AVE",
+      "section_id": "062",
+      "beg_location": "ARLINGTON AVE",
+      "end_location": "300 FT +/- EAST OF AVIS RD",
+      "length_ft": "525.0",
+      "reason": "end cross street not found on street"
+    },
+    {
+      "street_name": "SOUTH HOSPITAL DRIVE",
+      "section_id": "075",
+      "beg_location": "WEST END",
+      "end_location": "REGENT ST",
+      "length_ft": "150.0",
+      "reason": "street name not in centerlines"
+    },
+    {
+      "street_name": "SOUTHAMPTON AVE",
+      "section_id": "060",
+      "beg_location": "ARLINGTON AVE",
+      "end_location": "SAN LUIS RD",
+      "length_ft": "2050.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "THE CIRCLE",
+      "section_id": "060",
+      "beg_location": "INTERSECTION MARIN AVE, ETC.",
+      "end_location": "INTERSECTION ARLINGTON AVE",
+      "length_ft": "246.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "UNIVERSITY AVE",
+      "section_id": "025",
+      "beg_location": "3RD ST",
+      "end_location": "5TH ST",
+      "length_ft": "525.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "UNIVERSITY AVE",
+      "section_id": "028",
+      "beg_location": "5TH ST",
+      "end_location": "6TH ST",
+      "length_ft": "220.0",
+      "reason": "length mismatch (57%)",
+      "length_err": 0.573,
+      "matched_ft": 346,
+      "method": "cross-streets"
+    },
+    {
+      "street_name": "UNIVERSITY AVE OVERPASS",
+      "section_id": "018",
+      "beg_location": "I-80 ON/OFF RAMPS",
+      "end_location": "6TH ST",
+      "length_ft": "2100.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "WEST BOLIVAR DR",
+      "section_id": "040",
+      "beg_location": "PARKER ST",
+      "end_location": "GATE",
+      "length_ft": "50.0",
+      "reason": "begin cross street not found on street"
+    },
+    {
+      "street_name": "WEST PARNASSUS CT",
+      "section_id": "080",
+      "beg_location": "PARNASSUS PATH",
+      "end_location": "PARNASSUS RD",
+      "length_ft": "230.0",
+      "reason": "length mismatch (71%)",
+      "length_err": 0.706,
+      "matched_ft": 68,
+      "method": "cross-streets"
+    },
+    {
+      "street_name": "WOODMONT CT",
+      "section_id": "070",
+      "beg_location": "WOODMONT AVE (NORTH)",
+      "end_location": "WOODMONT AVE (SOUTH)",
+      "length_ft": "225.0",
+      "reason": "no path between cross streets along this street"
+    },
+    {
+      "street_name": "WOODSIDE RD (UPPER)",
+      "section_id": "030",
+      "beg_location": "THE CRECENT",
+      "end_location": "MERGE",
+      "length_ft": "600.0",
+      "reason": "begin cross street not found on street"
+    }
+  ]
+}

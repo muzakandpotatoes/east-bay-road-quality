@@ -1,0 +1,419 @@
+{
+  "paving_plan": {
+    "rows": 407,
+    "matched": 383,
+    "unmatched": [
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2027",
+        "street_name": "ENCINA PL",
+        "beg_location": "THE PLAZA DR",
+        "end_location": "THE UPLANDS",
+        "pci": "79",
+        "miles": "0.07",
+        "treatment": "Light Maintenance",
+        "cost": "$12,440",
+        "reason": "length mismatch (36%)",
+        "length_err": 0.36,
+        "matched_ft": 237,
+        "method": "cross-streets"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2027",
+        "street_name": "LE ROY AVE",
+        "beg_location": "RIDGE RD",
+        "end_location": "HEARST AVE",
+        "pci": "87",
+        "miles": "0.07",
+        "treatment": "Light Maintenance",
+        "cost": "$11,504",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2027",
+        "street_name": "ROSE ST",
+        "beg_location": "ORDWAY ST",
+        "end_location": "SACRAMENT O ST",
+        "pci": "85",
+        "miles": "0.24",
+        "treatment": "Light Maintenance",
+        "cost": "$40,000",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2027",
+        "street_name": "RUSSELL ST",
+        "beg_location": "MILVIA ST",
+        "end_location": "ADELINE ST",
+        "pci": "93",
+        "miles": "0.02",
+        "treatment": "Light Maintenance",
+        "cost": "$3,680",
+        "reason": "length mismatch (54%)",
+        "length_err": 0.539,
+        "matched_ft": 163,
+        "method": "cross-streets"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2028",
+        "street_name": "WEST PARNASSUS CT",
+        "beg_location": "PARNASSUS PATH",
+        "end_location": "PARNASSUS RD",
+        "pci": "78",
+        "miles": "0.04",
+        "treatment": "Light Maintenance",
+        "cost": "$4,496",
+        "reason": "length mismatch (68%)",
+        "length_err": 0.679,
+        "matched_ft": 68,
+        "method": "cross-streets"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2029",
+        "street_name": "GRANT ST",
+        "beg_location": "FRANCISCO ST",
+        "end_location": "OHLONE PARK",
+        "pci": "95",
+        "miles": "0.1",
+        "treatment": "Light Maintenance",
+        "cost": "$18,900",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2029",
+        "street_name": "HEARST AVE",
+        "beg_location": "SACRAMENT O ST",
+        "end_location": "CALIFORNIA ST",
+        "pci": "56",
+        "miles": "0.11",
+        "treatment": "Heavy Maintenance",
+        "cost": "$144,000",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2029",
+        "street_name": "THE CIRCLE",
+        "beg_location": "INTERSECTI ON MARIN AVE, ETC.",
+        "end_location": "INTERSECTI ON ARLINGTON AVE",
+        "pci": "70",
+        "miles": "0.05",
+        "treatment": "Light Rehab",
+        "cost": "$169,384",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2029",
+        "street_name": "UNIVERSITY AVE",
+        "beg_location": "3RD ST",
+        "end_location": "5TH ST",
+        "pci": "64",
+        "miles": "0.1",
+        "treatment": "Light Rehab",
+        "cost": "$651,000",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2029",
+        "street_name": "UNIVERSITY AVE",
+        "beg_location": "5TH ST",
+        "end_location": "6TH ST",
+        "pci": "63",
+        "miles": "0.04",
+        "treatment": "Heavy Maintenance",
+        "cost": "$123,200",
+        "reason": "length mismatch (64%)",
+        "length_err": 0.638,
+        "matched_ft": 346,
+        "method": "cross-streets"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2030",
+        "street_name": "BATEMAN ST",
+        "beg_location": "108 N/O PRINCE ST",
+        "end_location": "WOOLSEY ST",
+        "pci": "79",
+        "miles": "0.06",
+        "treatment": "Light Maintenance",
+        "cost": "$5,736",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2030",
+        "street_name": "DWIGHT WAY",
+        "beg_location": "SAN PABLO AVE",
+        "end_location": "SACRAMENT O ST",
+        "pci": "51",
+        "miles": "0.46",
+        "treatment": "Heavy Rehab",
+        "cost": "$1,545,480",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2030",
+        "street_name": "LE ROY AVE",
+        "beg_location": "CEDAR ST",
+        "end_location": "HILGARD AVE",
+        "pci": "75",
+        "miles": "0.06",
+        "treatment": "Light Maintenance",
+        "cost": "$8,000",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2030",
+        "street_name": "LE ROY AVE",
+        "beg_location": "HAWTHORN E TERRACE",
+        "end_location": "CEDAR ST",
+        "pci": "82",
+        "miles": "0.23",
+        "treatment": "Light Maintenance",
+        "cost": "$32,928",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2030",
+        "street_name": "PARKER ST",
+        "beg_location": "374' E/O MARTIN LUTHER KING JR",
+        "end_location": "MILVIA ST",
+        "pci": "76",
+        "miles": "0.06",
+        "treatment": "Light Maintenance",
+        "cost": "$12,222",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2030",
+        "street_name": "PARKER ST",
+        "beg_location": "MARTIN LUTHER KING JR WAY",
+        "end_location": "374' E/O MARTIN LUTHER KING JR",
+        "pci": "60",
+        "miles": "0.07",
+        "treatment": "Light Rehab",
+        "cost": "$216,421",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2031",
+        "street_name": "PIEDMONT AVE",
+        "beg_location": "AT END OF GAYLEY RD",
+        "end_location": "BANCROFT WAY",
+        "pci": "47",
+        "miles": "0.14",
+        "treatment": "Heavy Maintenance",
+        "cost": "$221,700",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2031",
+        "street_name": "PIEDMONT CRESCENT",
+        "beg_location": "DWIGHT WAY",
+        "end_location": "WARRING ST",
+        "pci": "90",
+        "miles": "0.05",
+        "treatment": "Light Maintenance",
+        "cost": "$21,276",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2031",
+        "street_name": "RUSSELL ST",
+        "beg_location": "SACRAMENT O ST",
+        "end_location": "MARTIN LUTHER KING JR",
+        "pci": "77",
+        "miles": "0.45",
+        "treatment": "Light Maintenance",
+        "cost": "$76,000",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2031",
+        "street_name": "UNIVERSITY AVE",
+        "beg_location": "SACRAMENT O ST",
+        "end_location": "MCGEE AVE",
+        "pci": "68",
+        "miles": "0.25",
+        "treatment": "Heavy Maintenance",
+        "cost": "$644,820",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2031",
+        "street_name": "UNIVERSITY AVE",
+        "beg_location": "SAN PABLO AVE",
+        "end_location": "SACRAMENT O ST",
+        "pci": "53",
+        "miles": "0.56",
+        "treatment": "Heavy Maintenance",
+        "cost": "$1,352,400",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "plan": "5-Year Rehab",
+        "fiscal_year": "2031",
+        "street_name": "VIRGINIA ST",
+        "beg_location": "EAST FRONTAGE RD (STATE P/L)",
+        "end_location": "2ND ST",
+        "pci": "90",
+        "miles": "0.07",
+        "treatment": "Light Maintenance",
+        "cost": "$11,504",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "plan": "Measure FF",
+        "fiscal_year": "2027",
+        "street_name": "McGee Avenue",
+        "beg_location": "Virginia Street",
+        "end_location": "Ohlone Park",
+        "pci": "39",
+        "miles": "0.16",
+        "treatment": "Heavy Rehab",
+        "cost": "$474,880.00",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "plan": "Measure FF",
+        "fiscal_year": "2031",
+        "street_name": "Allston Way",
+        "beg_location": "San Pablo Avenue",
+        "end_location": "Strawberry Creek Park",
+        "pci": "26",
+        "miles": "0.27",
+        "treatment": "Heavy Rehab",
+        "cost": "$1,344,200",
+        "reason": "end cross street not found on street"
+      }
+    ]
+  },
+  "moratorium": {
+    "rows": 130,
+    "matched": 117,
+    "active_matched": 110,
+    "unmatched": [
+      {
+        "street_name": "Arlington Ave",
+        "beg_location": "The Circle",
+        "end_location": "North City Limit",
+        "begins": "9/5/2025",
+        "ends": "9/5/2030",
+        "reason": "no path between cross streets along this street"
+      },
+      {
+        "street_name": "Marin Ave",
+        "beg_location": "Regal Rd",
+        "end_location": "Intersection",
+        "begins": "12/21/2022",
+        "ends": "12/21/2027",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "street_name": "Marin Ave",
+        "beg_location": "Euclid Ave",
+        "end_location": "Intersection",
+        "begins": "2/18/2023",
+        "ends": "2/18/2028",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "street_name": "Marin Ave",
+        "beg_location": "Spruce St",
+        "end_location": "Intersection",
+        "begins": "2/18/2023",
+        "ends": "2/18/2028",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "street_name": "Martin Luther King",
+        "beg_location": "JrUniversity Ave",
+        "end_location": "Addison St",
+        "begins": "3/26/2022",
+        "ends": "3/26/2027",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "street_name": "Martin Luther King",
+        "beg_location": "JrDwight Way",
+        "end_location": "Russell St",
+        "begins": "5/23/2024",
+        "ends": "5/23/2029",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "street_name": "Miller Ave",
+        "beg_location": "Poppy Ln",
+        "end_location": "Shasta Rd",
+        "begins": "10/6/2023",
+        "ends": "10/6/2028",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "street_name": "Parker St",
+        "beg_location": "10th St",
+        "end_location": "150 ft East Of 10th",
+        "begins": "3/23/2021",
+        "ends": "3/23/2026",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "street_name": "Sacramento St",
+        "beg_location": "Virginia St",
+        "end_location": "Intersection",
+        "begins": "8/13/2021",
+        "ends": "8/13/2026",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "street_name": "Spruce St",
+        "beg_location": "Eunice St",
+        "end_location": "Hearst Ave",
+        "begins": "10/26/2024",
+        "ends": "10/26/2029",
+        "reason": "no path between cross streets along this street"
+      },
+      {
+        "street_name": "University Ave",
+        "beg_location": "~200' west of 6th St",
+        "end_location": "University Ave Overpass",
+        "begins": "11/20/2024",
+        "ends": "11/20/2029",
+        "reason": "begin cross street not found on street"
+      },
+      {
+        "street_name": "Vistamont Ave",
+        "beg_location": "Woodmont Ave (N)",
+        "end_location": "450' S of Rosemont Ave",
+        "begins": "3/22/2024",
+        "ends": "3/22/2029",
+        "reason": "end cross street not found on street"
+      },
+      {
+        "street_name": "Vistamont Ave",
+        "beg_location": "Woodmont Ave (S)",
+        "end_location": "440' north of Sunset Ln",
+        "begins": "3/22/2024",
+        "ends": "3/22/2029",
+        "reason": "end cross street not found on street"
+      }
+    ]
+  }
+}

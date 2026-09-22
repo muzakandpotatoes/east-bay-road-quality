@@ -1,0 +1,174 @@
+{
+  "city": "Oakland",
+  "rows": 3971,
+  "matched": 3951,
+  "unmatched_rate": 0.005,
+  "reasons": {
+    "no geometry with this street/section id": 20
+  },
+  "pci_vs_gis_layer": {
+    "-82": 1,
+    "-58": 1,
+    "-34": 1,
+    "-27": 2,
+    "-26": 2,
+    "-14": 17,
+    "-13": 17,
+    "-12": 93,
+    "-11": 140,
+    "-10": 55,
+    "-9": 90,
+    "-8": 50,
+    "-7": 63,
+    "-6": 146,
+    "-5": 54,
+    "-4": 9,
+    "-3": 12,
+    "-2": 99,
+    "-1": 2387,
+    "0": 711,
+    "50": 1
+  },
+  "unmatched": [
+    {
+      "street_name": "14 AV",
+      "section_id": "0010",
+      "from": "E 12th St, WB",
+      "to": "E 12th St, EB",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "17 ST",
+      "section_id": "0010",
+      "from": "WEST ST",
+      "to": "18TH ST",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "23 AV",
+      "section_id": "0020",
+      "from": "BRIDGE SOUTH TOUCHDOWN",
+      "to": "BRIDGE NORTH TOUCHDOWN",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "27 ST",
+      "section_id": "006",
+      "from": "27 ST",
+      "to": "BROADWAY",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "29 AV",
+      "section_id": "0015",
+      "from": "E 12th St (SB)",
+      "to": "E 12th St (NB)",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "40 AV",
+      "section_id": "006",
+      "from": "BEACH ST",
+      "to": "CITY LIMIT",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "62 AV",
+      "section_id": "001A",
+      "from": "OUTLOOK AV",
+      "to": "MAJESTIC AV",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "62 AV",
+      "section_id": "001B",
+      "from": "MAJESTIC AV",
+      "to": "MAURITANIA AV",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "CLINTON LN",
+      "section_id": "001",
+      "from": "8 AV",
+      "to": "9 AV",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "GRAND AV",
+      "section_id": "800",
+      "from": "GRAND AV",
+      "to": "SANTA CLARA (ON RAMP)",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "HEGENBERGER RD",
+      "section_id": "001A",
+      "from": "HAWLEY ST",
+      "to": "BALDWIN ST",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "HOLLIS ST",
+      "section_id": "004",
+      "from": "34TH ST",
+      "to": "PERALTA ST",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "JOAQUINMILL (SB)",
+      "section_id": "004",
+      "from": "MONTEREY BLVD",
+      "to": "ROBINSON DR",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "LAKE MERRITT BLVD (EB)",
+      "section_id": "001",
+      "from": "12TH ST",
+      "to": "E 12TH ST",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "MACARTHUR BV",
+      "section_id": "021",
+      "from": "FRUITVALE AV",
+      "to": "CANON AV",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "MORAGA AV",
+      "section_id": "010",
+      "from": "PIEDMONT CITY LIMITS",
+      "to": "PVT CHANGE AT MASONIC AV",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "Navy Rd",
+      "section_id": "001",
+      "from": "Maritime St",
+      "to": "7th St",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "SKYVIEW DR",
+      "section_id": "150",
+      "from": "LEONA DR",
+      "to": "520' N/O LEONA DR",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "SKYVIEW DR",
+      "section_id": "250",
+      "from": "520' N/O LEONA DR",
+      "to": "BAYVIEW DR",
+      "reason": "no geometry with this street/section id"
+    },
+    {
+      "street_name": "TRAFALGAR PL",
+      "section_id": "002",
+      "from": "PARK BLVD",
+      "to": "LASALLE AV",
+      "reason": "no geometry with this street/section id"
+    }
+  ]
+}

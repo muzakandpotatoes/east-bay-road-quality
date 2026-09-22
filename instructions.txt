@@ -1,0 +1,42 @@
+Build a single self-contained interactive HTML map of street pavement quality in
+Berkeley and Oakland, CA, colored by Pavement Condition Index (PCI, 0-100).
+Source the PCI from the two cities' late-2024 StreetSaver survey reports, both
+PDFs with segment-level appendix tables: Berkeley's "2024 Pavement Management
+Plan Update (PTAP25)" at https://berkeleyca.gov/sites/default/files/2026-07/2024%20Pavement%20Management%20Plan%20Update%20%28PTAP25%29.pdf
+(Section IV "Reference Reports", street-name alphabetical listing, ~1,216
+segments, each with section ID, from/to limits, functional class and PCI), and
+Oakland's "P-TAP Round 25" report at https://www.oaklandca.gov/files/assets/city/v/1/transportation/documents/streets/street-paving/final-report-oakland-ptap-25.pdf
+(Appendix C "Section PCI/RSL Listing", ~3,304 sections, each with PCI and
+remaining service life). Extract those tables with pdfplumber or Camelot rather
+than naive text extraction, since they are multi-page ruled tables, and validate
+the parse by checking that the area-weighted mean PCI reproduces the reports'
+published citywide figures of 56 for Berkeley and 60 for Oakland before going any
+further. Then join each row to street geometry: pull street centerlines from the
+cities' ArcGIS REST endpoints (discoverable via mapoakland.com and Berkeley's
+open data portal at https://berkeleyca.gov/your-government/public-records/open-data-portal),
+falling back to OpenStreetMap via Overpass, and note that the join is the hard
+part of this project — the PCI rows are keyed by street name plus from/to cross
+streets, so you will need to split centerlines at intersections and match
+segments by name plus endpoint proximity, with normalized street-name and
+suffix handling (AV/AVE, ST, 1 AV vs First Ave), and you should report the
+unmatched rate per city and leave unmatched segments out rather than guessing.
+Render with Leaflet or MapLibre over a muted basemap, color PCI on a diverging
+or sequential ramp with the standard MTC breaks (0-24 failed, 25-49 poor, 50-59
+at-risk, 60-69 fair, 70-79 good, 80-100 very good/excellent), make line weight
+readable at neighborhood zoom, and put PCI, remaining service life, functional
+class and survey date in the hover/click popup. Add toggleable overlays for
+context: Berkeley's FY2027-31 Five-Year Street Rehabilitation and Measure FF
+paving plan (https://berkeleyca.gov/sites/default/files/2026-07/List%20of%20Five-Year%20Street%20Rehab%20Plan%20and%205-Yr%20FF%20Plan%20Paving%20Projects%20FY27-31.pdf)
+and moratorium list (https://berkeleyca.gov/sites/default/files/documents/Streets_on_Moratorium.pdf),
+and Oakland's 5-Year Paving Plan and moratorium-streets layers, whose ArcGIS
+feature services can be found behind
+https://experience.arcgis.com/experience/14b91553288040a782565ba11984bdd2/page/Paving-Map
+and https://oakgis.maps.arcgis.com/apps/webappviewer/index.html?id=1ff161ed26b04762a8c159cb56183d59
+(query the REST services directly for GeoJSON instead of scraping the viewers).
+Include a short legend and a caveats note stating that PCI indexes structural
+distress rather than ride quality, that Oakland's survey used a 44.9% sampling
+rate so some scores are modeled rather than observed, that data reflects fall
+2024 and predates Berkeley's Measure FF spending, and that presence on a paving
+plan reflects StreetSaver cost-effectiveness ranking and equity-zone priorities
+rather than worst-first condition. Also write out the joined dataset as GeoJSON
+and CSV alongside the map.
