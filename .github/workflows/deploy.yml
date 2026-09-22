@@ -1,0 +1,61 @@
+# Build the map and publish it to GitHub Pages.
+#
+# The page is built here rather than committed, because the built HTML embeds
+# the basemap API key. build_map.py needs only the standard library and
+# data/out/payload.json, so there is nothing to install.
+#
+# Basemap: without a TRACESTRACK_API_KEY secret the build falls back to
+# OpenStreetMap tiles, which is the default. Setting that secret switches the
+# published page to Tracestrack — but note the key is then readable by anyone
+# who views the page, so only do that with a referrer-restricted key.
+name: Deploy map
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the map
+        env:
+          TRACESTRACK_API_KEY: ${{ secrets.TRACESTRACK_API_KEY }}
+        run: |
+          mkdir -p site
+          python3 scripts/build_map.py data/out/payload.json site/index.html
+          cp -r docs site/docs
+
+      - name: Check the key did not leak into the page
+        if: ${{ secrets.TRACESTRACK_API_KEY == '' }}
+        run: |
+          if grep -q "tile.tracestrack.com" site/index.html; then
+            echo "::error::built page references a keyed basemap without a secret set"
+            exit 1
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
