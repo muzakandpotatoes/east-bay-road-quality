@@ -4,8 +4,15 @@ An interactive map of street pavement condition (PCI, 0–100) in Berkeley and
 Oakland, built from the two cities' late-2024 StreetSaver survey reports and
 joined to street geometry.
 
-**Open `east_bay_pavement_map.html`** — one self-contained file (1.3 MB), no
-build step or server needed.
+**[View the map →](https://muzakandpotatoes.github.io/east-bay-road-quality/)**
+
+Or build it locally: `./run_all.sh` writes `east_bay_pavement_map.html`, one
+self-contained file (1.3 MB), no server needed.
+
+The published page is built by GitHub Actions from `data/out/payload.json` and
+uses OpenStreetMap tiles. The local build uses Tracestrack if a key is present
+— see [Rebuilding](#rebuilding). The built HTML is deliberately not committed,
+because with a key it embeds a credential.
 
 ![map](docs/map.jpg)
 
